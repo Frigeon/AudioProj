@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Audio Playback and Note Taking System</title>
+
+        <link href="data:image/gif;" rel="icon" type="image/x-icon" />
+
+        <!-- Bootstrap -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="http://simonwhitaker.github.com/github-fork-ribbon-css/gh-fork-ribbon.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+		<!-- jQuery apparently 1.10.2, no particular flavor preferred-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+		
+        <!-- wavesurfer.js -->
+        <script src="script/wavesurfer.min.js"></script>
+
+        <!-- Demo -->
+        <script src="script/main.js"></script>
+    </head>
+
+    <body itemscope itemtype="http://schema.org/WebApplication">
+        <div class="container">
+            <div class="header">
+                <h1 itemprop="name">Audio Playback and Note Taking System</h1>
+            </div>
+
+            <div id="controls">
+                <div id="waveform" style="height: 128px">
+                    <div class="progress progress-striped active" id="progress-bar">
+                        <div class="progress-bar progress-bar-info"></div>
+                    </div>
+					<div id="time"></div>
+                    <!-- Here be the waveform -->
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" data-action="back">
+                        <i class="glyphicon glyphicon-step-backward"></i>
+                        Previous
+                    </button>
+
+                    <button class="btn btn-primary" data-action="play">
+                        <i class="glyphicon glyphicon-play"></i>
+                        Play
+                        /
+                        <i class="glyphicon glyphicon-pause"></i>
+                        Pause
+                    </button>
+
+                    <button class="btn btn-primary" data-action="forth">
+                        <i class="glyphicon glyphicon-step-forward"></i>
+                        Next
+                    </button>
+
+                    <button class="btn btn-primary" data-action="toggle-mute">
+                        <i class="glyphicon glyphicon-volume-off"></i>
+                        Toggle Mute
+                    </button>
+					
+					<button class="btn btn-primary" data-action="store-note">
+						<i class="glyphicon glyphicon-plus-sign"></i>
+						Store Note and Play
+					</button>
+					<br />
+					<label for="interval">Note Interval (in seconds): <input id="interval" type="number" value=60 onChange="interval = intervalText.val();" /></label><br />
+                </div>
+				
+	
+
+                <p class="lead pull-center" id="drop">
+                    Set your interval, then Drag'n'drop your selected
+                    <i class="glyphicon glyphicon-headphones"></i> file here!
+                </p>
+				<p>Note #: <span id="noteID">1</span></p>
+				<p>Time: <span id="noteTime">0:00:00</span></p>
+				<p>Total Duration: <span id="duration">0:00:00</span></p>
+				<a href="#" id="download" download="file.csv"><button>Download</button></a>
+				<p id="instr">CSV File is tab delimited</p>
+				<textarea id="notes"></textarea>
+            </div>
+    </body>
+</html>
