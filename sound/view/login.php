@@ -1,5 +1,5 @@
 
-<div class="row-fluid">
+
 <?php 
 if(!isset($_SESSION['userSession']))
 {
@@ -44,4 +44,4 @@ else
 	<?php 
 }	
 ?>
-</div>
+

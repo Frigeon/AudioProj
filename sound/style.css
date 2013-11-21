@@ -135,17 +135,12 @@ body {
 	float-right;	
 }
 .toSave{
-	display:none;
 	background-color:rgba(54, 54, 54, 0.75);
-	position:absolute;
-	padding:25px;
-	width:350px;
-	top:50px;
 	color:white;
 	border:1px solid black;
 	border-radius:10px;
 	box-shadow:0 0 12px #000;
-	z-index:11;
+	padding:10px;
 }
 .toSave textarea
 {
@@ -153,3 +148,8 @@ body {
 	max-width:100%;
 	min-height:125px;
 }
+
+button
+{
+	margin-bottom:5px;
+	}

@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Init
     wavesurfer.init(options);
     // Load audio from URL
-    wavesurfer.load('application/views/sound/FluxPavilion_ICantStop.mp3');
+    wavesurfer.load('FluxPavilion_ICantStop.mp3');
 
     // Start listening to drag'n'drop on document
     wavesurfer.bindDragNDrop('#drop');
@@ -154,7 +154,7 @@ wavesurfer.on('mark', function (marker) {
 	});
     
     //Toggle the save modal.
-    $("#toSave").toggle();
+    $("#toSave").modal('show');
     $("#currentTime").val(marker.position);
 	$("#saveLength").val(wavesurfer.backend.buffer.length);
     $("#sid").val(wavesurfer.backend.buffer.duration);

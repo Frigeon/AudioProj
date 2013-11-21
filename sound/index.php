@@ -11,22 +11,15 @@
 		?>
 
         <!-- Bootstrap -->
-        <link href="js/bootstrap.min.css" rel="stylesheet">
-        <link href="js/bootstrap-glyphicons.css" rel="stylesheet">
-
-
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
         
 
         <!-- wavesurfer.js -->
 		<script src="jquery.min.js"></script>
         <script src="js/wavesurfer.min.js"></script>
-
-
-        <!-- Demo -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-        
-       
         <script src="surfer.js"></script>
     </head>
 
@@ -37,8 +30,14 @@
            		<p><a href="https://github.com/katspaugh/wavesurfer.js/pull/17" title="Wavesure.js" target="_blank"> - using wavesurfer.js</a></p>
            		<label>UserID: </label>
            		<input id="userID" placeholder="userID" autofocus value="" />
+           		
+           	<?php 
+			include 'view/register.php';
+			include 'view/login.php';
+			?>
+           		
             </div>
-
+			
             <div id="demo">
                 <div id="waveform" style="height: 128px">
                     <div class="progress progress-striped active" id="progress-bar">
@@ -103,19 +102,49 @@
                 
                 
                 </p>
+                
+                
+                
+                <!-- Modal -->
+		<div class="modal fade " id="toSave" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content toSave">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Annotation</h4>
+		      </div>
+		      	<div class="form-group">
+		      		<label>File ID: </label><input class="form-control" disabled type="text" name="sid" id ="sid" /><br />
+	      		</div>
+	      		<div class="form-group">
+					<label>File Samples: </label><input class="form-control" disabled type="text" name="sid" id ="saveLength" /><br />
+				</div>
+	      		<div class="form-group">
+					<label>SampleRate: </label><input class="form-control" disabled type="text" name="sid" id ="saveSampleRate" /><br />
+				</div>
+	      		<div class="form-group">
+					<label>Channels: </label><input class="form-control" disabled type="text" name="sid" id ="channels" /><br />
+				</div>
+	      		<div class="form-group">
+					<label>Current Time: </label><input class="form-control" disabled type="text" name="sid" id ="currentTime" /><br />
+				</div>
+	      		<div class="form-group">
+					<textArea name="comments" id="comments" placeholder="Comments" ></textarea><br />
+				</div>
+	      		<div class="form-group">
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancel</button>
+		        <button class="btn btn-success" id="login" >Login <i class="glyphicon glyphicon-off"></i></button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+                
             </div>
 			
-			<div class="toSave" id="toSave">
-				<label>File ID: </label><input disabled type="text" name="sid" id ="sid" /><br />
-				<label>File Samples: </label><input disabled type="text" name="sid" id ="saveLength" /><br />
-				<label>SampleRate: </label><input disabled type="text" name="sid" id ="saveSampleRate" /><br />
-				<label>Channels: </label><input disabled type="text" name="sid" id ="channels" /><br />
-				<label>Current Time: </label><input disabled type="text" name="sid" id ="currentTime" /><br />
-				
-				<textArea name="comments" id="comments" placeholder="Comments" ></textarea><br />
-				<button id="save" class="btn btn-success">Save</button>
-				<button id="cancel" class="btn btn-danger">Cancel</button>
-			</div>
+
+			
+			
 
     </body>
 </html>

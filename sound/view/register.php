@@ -1,10 +1,9 @@
 	<!-- Button trigger modal -->
-	<div class="row-fluid well well-lg">
+
 		<button class="btn btn-success " data-toggle="modal" data-target="#registerModal">
 		  Register <i class="glyphicon glyphicon-plus-sign"></i>
 		</button>
-		
-	</div>
+
 	<!-- Modal -->
 	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
@@ -24,6 +23,9 @@
 				</div>
 		       <div class="form-group">
 				<input  class="form-control" type="password" id="passwordCheck" name="passwordCheck" placeholder="password check"  required/>
+				</div>
+				<div class="form-group">
+				<input  class="form-control" type="text" id="email" name="email" placeholder="email"  required/>
 				</div>
 
 			
