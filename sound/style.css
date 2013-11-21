@@ -1,0 +1,155 @@
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color:rgba(48, 48, 70, 1);
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 0px) {
+    .container {
+        max-width: 900px;
+        border:1px solid black;
+        border-radius:15px;
+        box-shadow:0 0 12px #000;
+        background-color:rgba(0,0,0,0.9);
+        color:rgba(0,255,0,0.8);
+    }
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+	.container{
+		border:1px solid black;
+        border-radius:15px;
+        box-shadow:0 0 12px #000;
+        background-color:rgba(0,0,0,0.9);
+        color:rgba(0,255,0,0.8);
+	}
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+}
+
+.controls {
+    padding: 30px 0 15px;
+    text-align: center;
+}
+
+.controls .btn {
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 990px) {
+    .controls .mark-controls {
+        display: inline;
+    }
+}
+
+.lead {
+    text-align: center;
+    padding: 20px;
+}
+
+#waveform {
+    position: relative;
+}
+
+#progress-bar {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 54px;
+    left: 5%;
+    width: 90%;
+}
+
+#drop {
+    border: 3px solid #ddd;
+    padding: 30px;
+}
+
+#drop.wavesurfer-dragover {
+    border-color: rgb(0,255,0);
+}
+
+.toSave button {
+	margin:5px;
+	}
+	
+.toSave label
+{
+	left:0px;	
+}
+.toSave input
+{
+	float-right;	
+}
+.toSave{
+	display:none;
+	background-color:rgba(54, 54, 54, 0.75);
+	position:absolute;
+	padding:25px;
+	width:350px;
+	top:50px;
+	color:white;
+	border:1px solid black;
+	border-radius:10px;
+	box-shadow:0 0 12px #000;
+	z-index:11;
+}
+.toSave textarea
+{
+	width:100%;	
+	max-width:100%;
+	min-height:125px;
+}
