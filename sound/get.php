@@ -12,7 +12,7 @@ echo json_encode(array('comments' => $comments));
 function connect()
 {
 	try {
-		$dbh = new PDO('mysql:host=gavincoyne.db.11745996.hostedresource.com;dbname=gavincoyne', 'gavincoyne', 'Corkey2000!');
+		$dbh = new PDO('mysql:host=gavincoyne.db.11745996.hostedresource.com;dbname=gavincoyne', 'gavincoyne', '');
 		return $dbh;  
 	} catch (PDOException $e) {
 	    print "Error!: " . $e->getMessage() . "<br/>";
