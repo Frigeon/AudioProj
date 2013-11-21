@@ -15,6 +15,9 @@ $(document).ready(function(){
 		$('#comments').val("");
 	});
 		
+	$('#annotate').click(function(){
+    	$('#toSave').modal('show');
+    });
 });
 
 function save()

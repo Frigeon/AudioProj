@@ -132,6 +132,8 @@ wavesurfer.on('ready', function () {
             eventHandlers[action](e);
         }
     });
+    
+    
 	
 		
 }());

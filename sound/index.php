@@ -77,6 +77,8 @@
 						<i class="glyphicon glyphicon-volume-up"></i>
 					</button>
 					
+					<button class="btn btn-primary" id="annotate" >Test Annotation</button>
+					
 				</div>
 				<div id="response">
 				</div>
@@ -111,7 +113,7 @@
 		    <div class="modal-content toSave">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		        <h4 class="modal-title" id="myModalLabel">Annotation</h4>
+		        <h2 class="modal-title" id="myModalLabel">Annotation</h2>
 		      </div>
 		      	<div class="form-group">
 		      		<label>File ID: </label><input class="form-control" disabled type="text" name="sid" id ="sid" /><br />
