@@ -18,6 +18,19 @@ $(document).ready(function(){
 	$('#annotate').click(function(){
     	$('#toSave').modal('show');
     });
+	
+	
+	$('#create').submit(function(e){
+		e.preventDefault();
+		 $.ajax({
+		      type: "POST",
+		      url: "controller/createUser.php",
+		      dataType: "json",
+		      success: function (data) {
+		        
+		      },
+		   });
+	});
 });
 
 function save()
