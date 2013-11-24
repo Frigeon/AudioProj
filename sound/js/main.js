@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
         progressColor : 'rgba(19, 24, 164, 1)',
         loaderColor   : 'purple',
         cursorColor   : 'navy',
-        markerWidth   : 2
+        markerWidth   : 2,
+		height		  : 150,
+		minPxPerSec	  : 100,
+		scrollParent  : true,
+		normalize     : true
     };
-   
-        options.minPxPerSec = 100;
-        options.scrollParent = true;
-        options.normalize = true;
 
     if (location.search.match('svg')) {
         options.renderer = 'SVG';
