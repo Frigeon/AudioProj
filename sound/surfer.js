@@ -31,6 +31,13 @@ $(document).ready(function(){
 		      },
 		   });
 	});
+	
+	$("#zoomChanger").on("change", function() {
+			$("canvas").each(function(index, element){
+				var context = element.getContext('2d');
+				context.scale(1, this.value/100);
+			});
+	});
 });
 
 function save()

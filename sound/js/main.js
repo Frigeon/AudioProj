@@ -177,7 +177,6 @@ wavesurfer.on('ready', function () {
 		'volumeChange': function() {
 			wavesurfer.setVolume(0.1);
 		}
-
     };
 
 
@@ -206,6 +205,8 @@ wavesurfer.on('ready', function () {
 	
 		
 }());
+
+
 
 // Flash mark when it's played over
 wavesurfer.on('mark', function (marker) {

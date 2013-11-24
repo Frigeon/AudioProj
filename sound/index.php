@@ -27,7 +27,7 @@
         <div class="container">
             <div class="header">
            		<h1 itemprop="name">Soundsation</h1>
-           		<p><a href="https://github.com/katspaugh/wavesurfer.js/pull/17" title="Wavesure.js" target="_blank"> - using wavesurfer.js</a></p>
+           		<p><a href="https://github.com/katspaugh/wavesurfer.js/pull/17" title="Wavesurfer.js" target="_blank"> - using wavesurfer.js</a></p>
            		<label>UserID: </label>
            		<input id="userID" placeholder="userID" autofocus value="" />
            		
@@ -77,7 +77,7 @@
                     </button>
 					<button class="btn btn-primary">
 						<i class="glyphicon glyphicon-zoom-out"></i>
-						<input id="zoomChanger" type="range" min="0" max="100" value="50" />
+						<input id="zoomChanger" type="range" min="0" max="200" value="100" />
 						<i class="glyphicon glyphicon-zoom-in"></i>
 					</button>
 					<button class="btn btn-primary">
