@@ -2,6 +2,8 @@
 
 // Create an instance
 var wavesurfer = Object.create(WaveSurfer);
+
+//global variables
 var intCreated = false;
 var numberOf = 1;
 var note = 1;
@@ -12,6 +14,7 @@ var file;
 var session;
 var storage = new Array();
 
+//Note object
 function Note(id, file, interval, duration, noteTime, note) {
 	var t = this;
 	t.id = id;

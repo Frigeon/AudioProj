@@ -43,16 +43,19 @@
                     <div class="progress progress-striped active" id="progress-bar">
                         <div class="progress-bar progress-bar-info"></div>
                     </div>
-
+					<div id="time"></div>
                     <!-- Here be the waveform -->
                 </div>
 
                 <div class="controls">
+					<button class="btn btn-primary" data-action="noteBack">
+						<i class="glyphicon glyphicon-step-backward"></i>
+						Prev. Note
+					</button>
                     <button class="btn btn-primary" data-action="back">
-                        <i class="glyphicon glyphicon-step-backward"></i>
+                        <i class="glyphicon glyphicon-backward"></i>
                         Backward
                     </button>
-
                     <button class="btn btn-primary" data-action="play">
                         <i class="glyphicon glyphicon-play"></i>
                         Play
@@ -60,12 +63,14 @@
                         <i class="glyphicon glyphicon-pause"></i>
                         Pause
                     </button>
-
                     <button class="btn btn-primary" data-action="forth">
-                        <i class="glyphicon glyphicon-step-forward"></i>
+                        <i class="glyphicon glyphicon-forward"></i>
                         Forward
                     </button>
-
+					<button class="btn btn-primary" data-action="noteForth">
+						<i class="glyphicon glyphicon-step-forward"></i>
+						Next Note
+					</button>
                     <button class="btn btn-primary" data-action="toggle-mute">
                         <i class="glyphicon glyphicon-volume-off"></i>
                         Toggle Mute

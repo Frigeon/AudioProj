@@ -151,4 +151,12 @@ body {
 button
 {
 	margin-bottom:5px;
-	}
+}
+
+#time {
+position: absolute;
+top: -20px;
+left: 20px;
+color: white;
+z-index: 1
+}
