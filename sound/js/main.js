@@ -4,7 +4,7 @@
 var wavesurfer = Object.create(WaveSurfer);
 
 //global variables
-var originalVol;
+var zoom = 1;
 
 //Note object
 function Note(id, file, interval, duration, noteTime, note) {
@@ -30,11 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
    
         options.minPxPerSec = 100;
         options.scrollParent = true;
-    
-
-    if (location.search.match('normalize')) {
         options.normalize = true;
-    }
 
     if (location.search.match('svg')) {
         options.renderer = 'SVG';

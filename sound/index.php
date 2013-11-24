@@ -75,11 +75,11 @@
                         <i class="glyphicon glyphicon-volume-off"></i>
                         Toggle Mute
                     </button>
-					<button class="btn btn-primary">
+					<!--<button class="btn btn-primary">
 						<i class="glyphicon glyphicon-zoom-out"></i>
 						<input id="zoomChanger" type="range" min="0" max="200" value="100" />
 						<i class="glyphicon glyphicon-zoom-in"></i>
-					</button>
+					</button>-->
 					<button class="btn btn-primary">
 						<i class="glyphicon glyphicon-volume-down"></i>
 						<input id="volumeChanger" type="range" min="0" max="100" value="100" />
