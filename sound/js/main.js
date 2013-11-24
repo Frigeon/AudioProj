@@ -3,6 +3,9 @@
 // Create an instance
 var wavesurfer = Object.create(WaveSurfer);
 
+//global variables
+var originalVol;
+
 //Note object
 function Note(id, file, interval, duration, noteTime, note) {
 	var t = this;
@@ -99,8 +102,11 @@ wavesurfer.on('ready', function () {
         },
 		
 		'noteBack': function() {
-			//currently not working as the note number hasn't been defined that I can see at least within this file...
+			//currently not working as the note/annotation id number hasn't been defined that I can see at least within this file...
+			//we could scan through the markers array and find the last played marker to do this
 			try{
+				var note = getCurrentMark(); //new code
+				//hmmm, seems to want to read markers[note-1] as undefined....
 				if(Math.floor(wavesurfer.markers[note-1].position) == Math.floor(wavesurfer.backend.getCurrentTime())){
 					if(note < 1){
 						note = 1;
@@ -130,9 +136,15 @@ wavesurfer.on('ready', function () {
         },
 
 		'noteForth': function() {
-			//currently not working as the note number hasn't been defined that I can see at least within this file...
+			//currently not working as the note/annotation id number hasn't been defined that I can see at least within this file...
+			//we could scan through the markers array and find the last played marker to do this
 			try{
+				var note = getCurrentMark(); //new code
 				getNote();
+				var numberOf = 0;
+				for(var mark in wavesurfer.markers){
+					numberOf++;
+				}
 				if(note + 1 <= numberOf+1){
 					wavesurfer.seekTo(wavesurfer.markers[note].percentage);
 					note++;
@@ -140,7 +152,7 @@ wavesurfer.on('ready', function () {
 						note = numberOf+1; //extra error checking just to be safe
 					}
 				}
-				updateNoteView();
+				//updateNoteView();
 				getNote();
 			} catch (err) {
 				console.log("Error: " + err.message);
@@ -233,6 +245,8 @@ wavesurfer.on('error', function (err) {
  *	or if we're preloading them from the database from the array/object
  */
 function getNote(){
+
+	
 	//This method is currently a stub
 	
 	/*var id = note - 1;
@@ -272,6 +286,16 @@ function playTimer(){
 										var timeID = document.getElementById("time");
 										timeID.innerHTML = time.toString().toHHMMSS();
 									  }, 250);
+}
+
+/**
+ *	Returns the most recently palyed marker
+ */
+function getCurrentMark(){
+	for(var i = 0; i < wavesurfer.markers.length; i++){
+		if(!wavesurfer.markers[i].played)
+			return i - 1;
+	}
 }
 
 //taken from stackOverflow as a useful conversion from seconds to time
