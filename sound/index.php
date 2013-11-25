@@ -1,4 +1,4 @@
-
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +9,7 @@
 			//include('db.php');
 			define('PATH', 'AudioProj/sound/');
 			define('SALT', 'Hey.This.!5,A,S@LTY #');
+			
 		?>
 
         <!-- Bootstrap -->
@@ -32,7 +33,7 @@
            		<p><a href="https://github.com/katspaugh/wavesurfer.js/pull/17" title="Wavesurfer.js" target="_blank"> - using wavesurfer.js</a></p>
            		<div class="">
 		           	<?php 
-		           	session_start();
+		           	
 		
 		           	if(!isset($_SESSION['userSession']))
 						include 'view/register.php';
@@ -180,10 +181,7 @@
                 ?>
                 
             </div>
-			
-		
-			
-			
+
 
     </body>
 </html>
