@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	
+	$(".chosen-select").chosen({width: "95%"});
+	
 	$("#volumeChanger").on("change", function() {
 		wavesurfer.setVolume(this.value/100);
 	});

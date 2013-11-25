@@ -14,7 +14,7 @@
         <!-- Bootstrap -->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
-        
+        <link rel="stylesheet" href="chosen/chosen.min.css" />
 
         <!-- wavesurfer.js -->
 		<script src="js/jquery.min.js"></script>
@@ -22,6 +22,7 @@
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/surfer.js"></script>
+        <script src="chosen/chosen.jquery.min.js"></script>
     </head>
 
     <body >
@@ -29,16 +30,17 @@
             <div class="header">
            		<h1 itemprop="name">Soundsation</h1>
            		<p><a href="https://github.com/katspaugh/wavesurfer.js/pull/17" title="Wavesurfer.js" target="_blank"> - using wavesurfer.js</a></p>
-           		
-           	<?php 
-           	session_start();
-
-
-			include 'view/register.php';
-			include 'view/login.php';
-			
-			?>
-           		
+           		<div class="">
+		           	<?php 
+		           	session_start();
+		
+		           	if(!isset($_SESSION['userSession']))
+						include 'view/register.php';
+					include 'view/login.php';
+					include 'model/db.php';
+					
+					?>
+           		</div>
             </div>
 			<?php 
 			if(isset($_SESSION['userSession']))
@@ -103,22 +105,7 @@
 	                    here!
 	                </p>
 	                
-	                <p>
-	                To load comments simply
-	                <ul>
-	                	<li>load your song by dragging the file into the square.</li>
-	                	<li>Enter your user ID in the userID field above.</li>
-	                	<li>Press play and let the applcation do the rest</li>
-	                </ul>
-	                
-	                <ul>
-	                	<li>Glyphicons not loading properly</li>
-	                	<li>Longer songs may not load due to browser limitations</li>
-	                	<li>Longer songs visual waves sometimes do not load</li>
-	                </ul>
-	                
-	                
-	                </p>
+	               
 	                
 	                
 	                
@@ -130,23 +117,36 @@
 					        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					        <h2 class="modal-title" id="myModalLabel">Annotation</h2>
 					      </div>
-					      	<div class="form-group">
-					      		<label>File ID: </label><input class="form-control" disabled type="text" name="sid" id ="sid" /><br />
-				      		</div>
-				      		<div class="form-group">
-								<label>File Samples: </label><input class="form-control" disabled type="text" name="sid" id ="saveLength" /><br />
+						<div id="speciesList" class="form-group">
+							<?php 
+								$con =  new DB();
+								$con->connect();
+								$species = $con->getSpeciesList();
+							?>
+								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-rtl">
+									<option>Choose Species"</option>
+									<?php 
+										foreach($species as $val)
+										{
+											echo '<option value="'.$val['BirdID'].'">'.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
+										}
+									?>
+								</select>
 							</div>
-				      		<div class="form-group">
-								<label>SampleRate: </label><input class="form-control" disabled type="text" name="sid" id ="saveSampleRate" /><br />
-							</div>
-				      		<div class="form-group">
-								<label>Channels: </label><input class="form-control" disabled type="text" name="sid" id ="channels" /><br />
-							</div>
-				      		<div class="form-group">
-								<label>Current Time: </label><input class="form-control" disabled type="text" name="sid" id ="currentTime" /><br />
-							</div>
-				      		<div class="form-group">
-								<textArea name="comments" id="comments" placeholder="Comments" ></textarea><br />
+							<div id="speciesFamily" class="form-group">
+							<?php 
+								$families = $con->getSpeciesFamily();
+								//var_dump($families);
+							?>
+								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-rtl">
+									<option>Choose Species Family"</option>
+									<?php 
+										foreach($families as $family)
+										{
+											echo '<option value="'.$family['familyID'].'">'.$family['CommonName'].' - '.$family['ScientificName'].'</option>';
+										}
+									?>
+								</select>
 							</div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancel</button>

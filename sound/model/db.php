@@ -1,5 +1,5 @@
 <?php 
-define('SALT', 'Hey.This.!5,A,S@LTY #');
+//define('SALT', 'Hey.This.!5,A,S@LTY #');
 class DB{
 	public $db;
 	
@@ -91,7 +91,23 @@ class DB{
 		return $result['userID'];
 	}
 	
-
+	public function getSpeciesFamily()
+	{
+		$sql = 'SELECT * FROM familyList';
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		$result = $query->fetchAll();
+		return $result;
+	}
+	
+	public function getSpeciesList()
+	{
+		$sql = 'SELECT * FROM speciesList';
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		$result = $query->fetchAll();
+		return $result;
+	}
 
 
 }

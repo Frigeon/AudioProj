@@ -1,3 +1,4 @@
+
 /* Space out content a bit */
 body {
     padding-top: 20px;
@@ -159,4 +160,10 @@ top: -20px;
 left: 20px;
 color: white;
 z-index: 1
+}
+
+
+.noColor
+{
+	background:none;	
 }
