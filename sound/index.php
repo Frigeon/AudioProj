@@ -124,8 +124,8 @@
 								$con->connect();
 								$species = $con->getSpeciesList();
 							?>
-								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-rtl">
-									<option>Choose Species"</option>
+								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single">
+									<option>Choose Species</option>
 									<?php 
 										foreach($species as $val)
 										{
@@ -139,7 +139,7 @@
 								$families = $con->getSpeciesFamily();
 								//var_dump($families);
 							?>
-								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-rtl">
+								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single">
 									<option>Choose Species Family"</option>
 									<?php 
 										foreach($families as $family)
