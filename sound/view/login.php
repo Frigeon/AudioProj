@@ -16,8 +16,10 @@ if(!isset($_SESSION['userSession']))
 		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		        <h4 class="modal-title" id="myModalLabel">Login</h4>
 		      </div>
+		      <form id="login" action="#">
 		      <div class="modal-body">
 		      <div class="form-group">
+		      
 		       <input type="text"  class="form-control" id="username" placeholder="username" />
 		       </div>
 		       <div class="form-group">
@@ -29,6 +31,7 @@ if(!isset($_SESSION['userSession']))
 		        <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancel</button>
 		        <button class="btn btn-success" id="login" >Login <i class="glyphicon glyphicon-off"></i></button>
 		      </div>
+		      </form>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
