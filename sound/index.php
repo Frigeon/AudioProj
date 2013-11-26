@@ -130,7 +130,7 @@
 									<?php
 										$species = $con->getSpeciesList();
 										foreach($species as $val){
-											echo '<option value="'.$val['BirdID'].'">'.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
+											echo '<option value="'.$val['BirdID'].' data-family="'.$val['familyID'].'" >'.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
 										}
 									?>
 								</select>
