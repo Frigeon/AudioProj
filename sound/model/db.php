@@ -17,7 +17,6 @@ class DB{
 		
 	}
 	
-	
 	public function createUser($userName, $password, $email)
 	{
 		$salt = hash('sha512', SALT.$email);
@@ -108,8 +107,39 @@ class DB{
 		$result = $query->fetchAll();
 		return $result;
 	}
-
-
+	
+	/**
+	 *	Returns the fileID of the file within the data 
+	 */
+	public function getFileID(fileName){
+		$sql = "SELECT fileID FROM file WHERE fileName=:fileName LIMIT 1";
+		$query = $this->db->prepare($sql);
+		$query->bindParam(":fileName", fileName);
+		$query->execute();
+		$result = $query->fetchAll();
+		if(is_null($result[0]['fileID']) {
+			// if the fileID is null, create a new one and then get that ID
+			$insSQL = "INSERT INTO file (fileName) VALUES (:fileName)";
+			$insQuery = $this->db->prepare($insSQL);
+			$insQuery->bindParam(":fileName", fileName);
+			$insQuery->execute();
+			$query->execute()
+			$result = $query->fetchAll();
+		}
+		return $result[0]['fileID'];// this should be the file ID
+	}
+	
+	/**
+	 *	Returns the array of Start and End points for marking
+	 */
+	public function getMarks(fileID){
+		$sql = "SELECT eventStart AS start, eventEnd AS end FROM data WHERE fileID=:fileID ORDER BY start";
+		$query = $this->db->prepare($sql);
+		$query->bindParam(":fileID", fileID);
+		$query->execute();
+		$result = $query->fetchAll();
+		return $result; //should return the array of mark points
+	}
 }
 
 
