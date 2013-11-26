@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 $("#family").change(function(){
 	var famID = $("#family option:selected").val();
+	console.log(famID);
 	$(".species").each(function(index, element){
 		if(element.attr('data-family') == famID){
 			element.removeClass('hide');
