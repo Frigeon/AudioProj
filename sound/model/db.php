@@ -108,6 +108,16 @@ class DB{
 		$result = $query->fetchAll();
 		return $result;
 	}
+	
+	public function getFileID($fileName)
+	{
+		$sql = 'SELECT fileID FROM file WHERE fileName=:fileName';
+		$query = $this->db->prepare($sql);
+		$query->execute(array(':fileName'=>$fileName));
+		$result = $query->fetchAll();
+		return $result;
+	}
+	
 
 
 }
