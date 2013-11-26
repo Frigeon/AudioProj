@@ -163,7 +163,15 @@ z-index: 1
 }
 
 
-.noColor
+.toLoad 
 {
-	background:none;	
+	width:100%;	
+}
+.dataRow tbody tr td
+{
+	
+}
+.DataRow tbody tr td
+{
+	pading:5px;
 }

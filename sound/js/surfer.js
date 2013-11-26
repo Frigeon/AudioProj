@@ -24,18 +24,17 @@ $(document).ready(function(){
 
 	
 	$('#loadData').click(function(){
-//		 $.ajax({
-//		      type: "POST",
-//		      url: "controller/loadData.php",
-//		      dataType: "json",
-//		      data:{
-//		    	  username:$('#drop').innerText(),
-//	
-//		    	  },
-//		      success: function (data) {
-//		        alert('Created user');
-//		      }
-//		   });
+		 $.ajax({
+		      type: "POST",
+		      url: "controller/loadData.php",
+		      dataType: "json",
+		      data:{
+		    	  fileName:$('#drop').text()
+		    	  },
+		      success: function (data) {
+		        $('#loadDataModal').html(data.data);
+		      }
+		   });
 		console.log($('#drop').text());
     	$('#viewData').modal('show');
     });

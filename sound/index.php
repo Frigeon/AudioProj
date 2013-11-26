@@ -158,18 +158,17 @@
 					</div><!-- /.modal -->
 					
 					<!-- Modal -->
-					<div class="modal fade " id="viewData" tabindex="-1" role="dialog" aria-labelledby="viewDataLabel" aria-hidden="true">
-					  <div class="modal-dialog">
-					    <div class="modal-content toSave">
+					<div class="modal fade toLoad" id="viewData" tabindex="-1" role="dialog" aria-labelledby="viewDataLabel" aria-hidden="true">
+					  <div class="modal-dialog toLoad">
+					    <div class="modal-content">
 					      <div class="modal-header">
 					        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					        <h2 class="modal-title" id="myModalLabel">Data</h2>
 					      </div>
-					      	
-				      		
-					      <div class="modal-footer">
+					      	<div id="loadDataModal" class="">
+				      		</div>
+					      <div class="modal-footer toLoad">
 					        <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancel</button>
-					        <button class="btn btn-success" id="login" >Login <i class="glyphicon glyphicon-off"></i></button>
 					      </div>
 					    </div><!-- /.modal-content -->
 					  </div><!-- /.modal-dialog -->
