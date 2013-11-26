@@ -167,11 +167,18 @@ z-index: 1
 {
 	width:100%;	
 }
-.dataRow tbody tr td
+table, td, th
 {
-	
+	color:#000;
+	margin:0 auto 0 auto;
+	border:1px solid black;
 }
-.DataRow tbody tr td
+ td, th
 {
-	pading:5px;
+	padding:5px;
+}
+
+tr:nth-child(odd)
+{
+	background:hsla(186, 100%, 69%, 0.61);
 }
