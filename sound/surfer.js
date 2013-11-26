@@ -38,6 +38,17 @@ $(document).ready(function(){
 	});
 });
 
+$("#family").change(function(){
+	var famID = $("#family option:selected").val();
+	$(".species").each(function(index, element){
+		if(element.attr('data-family') == famID){
+			element.removeClass('hide');
+		} else if(!element.hasClass('hide')){
+			element.addClass('hide');
+		}
+	});
+});
+
 function save()
 {	
 	wavesurfer.pause();

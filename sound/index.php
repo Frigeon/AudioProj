@@ -115,7 +115,7 @@
 									$families = $con->getSpeciesFamily();
 									//var_dump($families);
 								?>
-								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single">
+								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single" id="family">
 									<option>Choose Species Family</option>
 									<?php 
 										foreach($families as $family){
@@ -130,7 +130,7 @@
 									<?php
 										$species = $con->getSpeciesList();
 										foreach($species as $val){
-											echo '<option value="'.$val['BirdID'].' data-family="'.$val['familyID'].'" >'.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
+											echo '<option value="'.$val['BirdID'].' data-family="'.$val['familyID'].'" class="species hide">'.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
 										}
 									?>
 								</select>

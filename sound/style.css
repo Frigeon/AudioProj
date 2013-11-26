@@ -186,3 +186,7 @@ tr:nth-child(even)
 {
 	background:hsla(186, 8%, 100%, 0.73);
 }
+
+.hide{
+	display: none;
+}
