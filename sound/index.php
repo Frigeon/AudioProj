@@ -140,7 +140,7 @@
 								//var_dump($families);
 							?>
 								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single">
-									<option>Choose Species Family"</option>
+									<option>Choose Species Family</option>
 									<?php 
 										foreach($families as $family)
 										{
