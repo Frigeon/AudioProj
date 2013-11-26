@@ -40,7 +40,7 @@
 				</div>
 			</div>
 			<?php 
-				if(isset($_SESSION['userSession'])){
+			if(isset($_SESSION['userSession'])){
 			?>
 			<div id="demo">
 				<div id="waveform" style="height: 128px">
@@ -108,7 +108,10 @@
 								<h2 class="modal-title" id="myModalLabel">Annotation</h2>
 							</div>
 							<div id="speciesFamily" class="form-group">
-								<?php
+								<?php 
+									$con =  new DB();
+									$con->connect();
+
 									$families = $con->getSpeciesFamily();
 									//var_dump($families);
 								?>
@@ -122,14 +125,10 @@
 								</select>
 							</div>
 							<div id="speciesList" class="form-group">
-								<?php 
-									$con =  new DB();
-									$con->connect();
-									$species = $con->getSpeciesList();
-								?>
 								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single">
 									<option>Choose Species</option>
-									<?php 
+									<?php
+										$species = $con->getSpeciesList();
 										foreach($species as $val){
 											echo '<option value="'.$val['BirdID'].'">'.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
 										}
@@ -160,10 +159,10 @@
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-dialog -->
 				</div><!-- /.modal -->
-				<?php 
-				}
-				?>
 			</div>
+			<?php 
+			}
+			?>
 		</div>
 	</body>
 </html>
