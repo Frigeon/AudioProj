@@ -160,7 +160,7 @@
 					<!-- Modal -->
 					<div class="modal fade toLoad" id="viewData" tabindex="-1" role="dialog" aria-labelledby="viewDataLabel" aria-hidden="true">
 					  <div class="modal-dialog toLoad">
-					    <div class="modal-content">
+					    <div class="modal-content toSave">
 					      <div class="modal-header">
 					        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					        <h2 class="modal-title" id="myModalLabel">Data</h2>
