@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Init
     wavesurfer.init(options);
     // Load audio from URL
-    wavesurfer.load('FluxPavilion_ICantStop.mp3');
+    wavesurfer.load('26-RC2_20120415_210502.wav');
 
     // Start listening to drag'n'drop on document
     wavesurfer.bindDragNDrop('#drop');
