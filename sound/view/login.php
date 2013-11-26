@@ -5,7 +5,7 @@ if(!isset($_SESSION['userSession']))
 {
 	?>
 		<!-- Button trigger modal -->
-		<button class="btn btn-primary pull-right marg15" data-toggle="modal" data-target="#loginModal">
+		<button class="btn btn-primary pull-right marg15" data-toggle="modal" data-target="#loginModal" onclick="setTimeout(function(){$('#username').focus();}, 500);">
 		  Login
 		</button>
 		<!-- Modal -->

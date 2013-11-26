@@ -1,6 +1,6 @@
 	<!-- Button trigger modal -->
 
-		<button class="btn btn-success " data-toggle="modal" data-target="#registerModal">
+		<button class="btn btn-success " data-toggle="modal" data-target="#registerModal" onclick="setTimeout(function(){$('#usernameIn').focus();}, 500);">
 		  Register <i class="glyphicon glyphicon-plus-sign"></i>
 		</button>
 
