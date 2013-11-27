@@ -33,6 +33,25 @@ $(document).ready(function(){
 		    	  },
 		      success: function (data) {
 		        $('#loadDataModal').html(data.data);
+		        
+		        console.log(data.marks.length);
+		        for(var i = 0; i < data.marks.length; i++)
+		        {
+		        	 wavesurfer.mark({
+		                 id: data.marks[i][2],
+		                 position: data.marks[i][2],
+		                 color: 'rgba(0, 255, 0, 0.9)',
+		                 played: true
+		             });
+		        	 
+		        	 wavesurfer.mark({
+		                 id: data.marks[i][3],
+		                 position: data.marks[i][3],
+		                 color: 'rgba(255, 0, 0, 0.9)',
+		                 played: true
+		             });
+		        }
+		        
 		      }
 		   });
 		console.log($('#drop').text());
@@ -140,31 +159,3 @@ $(document).ready(function(){
 	});
 	
 });
-
-function save()
-{	
-//	wavesurfer.pause();
-//	wavesurfer.WebAudio;
-//	var ac = wavesurfer.WebAudio.audioContext;
-//	var currentTime = ac.currentTime;
-	
-	
-	
-//	$.post("application/views/sound/record.php",{
-//			curTime : $('#currentTime').val(),
-//			Duration : wavesurfer.backend.buffer.duration,
-//			channels : wavesurfer.backend.buffer.numberOfChannels,
-//			sampleRate : wavesurfer.backend.buffer.sampleRate,
-//			userID : $('#userID').val(),
-//			comments : $('#comments').val()
-//			
-//		},
-//		function(data) {
-//			var data = jQuery.parseJSON(data);
-//			if(data.foo)
-//			{
-//				$("#response").html("Save Successful!");
-//			}
-//		}
-//	);
-}

@@ -55,5 +55,5 @@ foreach($userData as $val)
 
 			
 $rows .= '</table>';
-echo json_encode(array('fileId'=>$fileID, 'data'=>$rows));
+echo json_encode(array('fileId'=>$fileID, 'data'=>$rows, 'marks'=>$data));
 return;

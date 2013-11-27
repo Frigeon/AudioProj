@@ -211,15 +211,7 @@ wavesurfer.on('mark', function (marker) {
     
     //ajax call to get the comments from the database.
    
-    $.post("application/views/sound/get.php",{
-		curTime : marker.position,
-		fileID : wavesurfer.backend.buffer.duration,
-		userID : $('#userID').val()
-	},
-	function(data) {
-		var obj = jQuery.parseJSON(data);
-		$("#comments").val(obj.comments);
-	});
+   
     
     //Toggle the save modal.
     $("#toSave").modal('show');
