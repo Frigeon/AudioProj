@@ -13,7 +13,7 @@ $(document).ready(function(){
 	});
 	
 	$("#save").on("click", function(){
-		$(".toSave").toggle();
+
 		save();
 		$('#comments').val("");
 	});
@@ -73,7 +73,7 @@ $(document).ready(function(){
 		    	  password:$('#password').val()
 		    	  },
 		      success: function (data) {
-		        location.reload();
+		        //location.reload();
 		      }
 		   });
 		
@@ -96,13 +96,9 @@ $(document).ready(function(){
 			console.log("Zoom: " + zoom);
 	});
 	
-	$("#family").chosen().change(function(){
-		
+	$("#family").chosen().change(function(){	
 		var famID = $("#family option:selected").val();
-		console.log(famID);
 		$(".species").each(function(index, element){
-			console.log(element);
-//			$(element).removeClass('hide');
 			if($(element).attr('data-family') == famID){
 				$(element).removeClass('hide');
 			} else if(!$(element).hasClass('hide')){
@@ -112,6 +108,23 @@ $(document).ready(function(){
 		});
 		$('#speciesListSelect').chosen();
 		$('#speciesListSelect').trigger("chosen:updated");
+		
+	});
+	
+	$('#saveButton').on('click', function(){
+		console.log('test');
+		
+		 $.ajax({
+		      type: "POST",
+		      url: "controller/saveNote.php",
+		      dataType: "json",
+		      data:{
+		    	  	
+		    	  },
+		      success: function (data) {
+		    	  $("#toSave").modal('hide');
+		      }
+		   });
 		
 	});
 	

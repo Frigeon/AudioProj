@@ -137,7 +137,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-danger" data-dismiss="modal" >Cancel</button>
-								<button class="btn btn-success" id="save" >Save</button>
+								<button class="btn btn-success" id="saveButton" >Save</button>
 							</div>
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-dialog -->

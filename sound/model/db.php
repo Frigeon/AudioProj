@@ -44,7 +44,7 @@ class DB{
 	
 	public function getUserPass($username, $password)
 	{
-		$sql ="SELECT password FROM user WHERE userName = :username";
+		$sql ="SELECT password, salt FROM user WHERE userName = :username";
 		$query = $this->db->prepare($sql);
 		$binds = array(":username"=>$username);
 		
@@ -55,7 +55,7 @@ class DB{
 		{
 			if( $result['password']== hash('sha512', $password))
 			{
-				return true;
+				return $result['salt'];
 			}
 			
 		}

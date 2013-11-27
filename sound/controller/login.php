@@ -13,11 +13,11 @@ if(!isset($_POST['password']) || !isset($_POST['username']))
 $password = $_POST['password'];
 $username = $_POST['username'];
 
-if($con->getUserPass($username, $password))
+if($salt = $con->getUserPass($username, $password))
 {
 	session_start();
 	$_SESSION['userSession'] = hash('sha512', $username.$salt);
-
+	$_SESSION['userSalt'] = $salt;
 	echo json_encode(array("sucess"=>"Logged In"));
 }
 else 
