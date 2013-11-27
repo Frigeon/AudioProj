@@ -111,21 +111,32 @@ $(document).ready(function(){
 		
 	});
 	
-	$('#saveButton').on('click', function(){
-		console.log('test');
+	$('#saveForm').submit( function(e){
+		e.preventDefault();
+		
 		
 		 $.ajax({
 		      type: "POST",
 		      url: "controller/saveNote.php",
 		      dataType: "json",
 		      data:{
-		    	  	
+		    	  	fileName:$('#drop').text(),
+		    	  	userRel:$('#userRel').val(),
+		    	  	noteStart:$('#startTime').val(),
+		    	  	noteEnd:$('#endTime').val(),
+		    	  	userFamilyID:$('#family').chosen().val(),
+		    	  	userSpeciesID:$('#speciesListSelect').chosen().val(),
+		    	  	note:$('#noteIn').val()
 		    	  },
 		      success: function (data) {
-		    	  $("#toSave").modal('hide');
+		    	 // $("#toSave").modal('hide');
 		      }
 		   });
 		
+	});
+	
+	$('#userRel').change(function(){
+		$('#dynamicRel').text($('#userRel').val());
 	});
 	
 });

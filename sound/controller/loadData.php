@@ -35,7 +35,7 @@ $rows .= '</table>';
 
 $userData =$con->getNoteData($fileID);
 
-$rows .= '<table  class="DataRow"><tr ><th>noteID</th><th>userID</th><th>userRel</th><th>noteStart</th><th>noteEnd</th>'
+$rows .= '<table style="margin-top:30px;" class="DataRow"><tr ><th>noteID</th><th>userID</th><th>userRel</th><th>noteStart</th><th>noteEnd</th>'
 			.'<th>Note</th><th>userFamilyID</th><th>userSpeciesID</th></tr>';
 
 foreach($userData as $val)

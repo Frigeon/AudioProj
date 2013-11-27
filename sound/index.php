@@ -103,10 +103,31 @@
 				<div class="modal fade " id="toSave" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content toSave">
+						<form id="saveForm">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 								<h2 class="modal-title" id="myModalLabel">Annotation</h2>
 							</div>
+							
+							<div class="form-group">
+								<label>Rough Start Time:</label>
+								<input id="startTime" type="number" min="0" />
+							</div>
+							
+							<div class="form-group">
+								<label>Rough End Time:</label>
+								<input id="endTime" type="number" min="0" />
+							</div>
+							
+							<div class="form-group">
+								<label>Relevance</label>
+								<input type="range" id="userRel" min="1" max="100" value="0"><span id="dynamicRel">0</span>
+							</div>
+							<div class="form-group">
+								<textarea id="noteIn" placeholder="Enter Note Here"></textarea>
+							</div>
+							
+							
 							<div id="speciesFamily" class="form-group">
 								<?php 
 									$con =  new DB();
@@ -137,8 +158,9 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-danger" data-dismiss="modal" >Cancel</button>
-								<button class="btn btn-success" id="saveButton" >Save</button>
+								<button type="submit" class="btn btn-success" id="saveButton" >Save</button>
 							</div>
+							</form>
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-dialog -->
 				</div><!-- /.modal -->

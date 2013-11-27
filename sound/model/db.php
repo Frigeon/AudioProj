@@ -163,6 +163,17 @@ class DB{
 		$result = $query->fetchAll();
 		return $result; 
 	}
+	
+	public function insertNote($userID, $fileID, $userRel, $noteStart, $noteEnd, $note, $userFamilyID, $userSpeciesID)
+	{
+		$sql = "INSERT INTO note (noteID, userID, fileID, userRel, noteStart, noteEnd, note, userFamilyID, userSpeciesID)
+					VALUES(null , :userID, :fileID, :userRel, :noteStart, :noteEnd, :note, :userFamilyID, :userSpeciesID)";
+		$query = $this->db->prepare($sql);
+		return $query->execute(array(':userID'=>$userID, ':fileID'=>$fileID, ':userRel'=>$userRel,
+							 ':noteStart'=>$noteStart, ':noteEnd'=>$noteEnd, ':note'=>$note,
+							 ':userFamilyID'=>$userFamilyID, ':userSpeciesID'=>$userSpeciesID));
+
+	}
 }
 
 
