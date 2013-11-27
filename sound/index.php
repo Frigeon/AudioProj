@@ -199,11 +199,11 @@
 							</div>
 							<div class="modal-body">
 								<ul class="list-group">
-								  <li class="list-group-item">To start register, click the <span style="color:green">green</span> Register Button</li>
+								  <li class="list-group-item">To start registration, click the <span style="color:green">green</span> Register Button</li>
 								  <li class="list-group-item">Login using the <span style="color:blue">blue</span> login Button</li>
-								  <li class="list-group-item">To load a file drag it over top of the div witht he square white boder and drop it.</li>
+								  <li class="list-group-item">To load a file drag it over top of the div with the square white border and drop it.</li>
 								  <li class="list-group-item">To load marks, first load a file then hit load Data</li>
-								  <li class="list-group-item">Annotations will pop up at every mark, or you can create your own by click Annotation</li>
+								  <li class="list-group-item">Annotations will pop up at every mark, or you can create your own by clicking Annotation</li>
 								</ul>
 							</div>
 							<div class="modal-footer toLoad">
