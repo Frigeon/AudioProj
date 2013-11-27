@@ -190,31 +190,30 @@
 			?>
 			
 			<!-- Modal -->
-				<div class="modal fade" id="viewHelp" tabindex="-1" role="dialog" aria-labelledby="viewDataLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content toSave">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-								<h2 class="modal-title" id="myModalLabel">HELP!</h2>
-							</div>
-							<div class="modal-body">
-								<ul class="list-group">
-								  <li class="list-group-item">To start registration, click the <span style="color:green">green</span> Register Button</li>
-								  <li class="list-group-item">Login using the <span style="color:blue">blue</span> login Button</li>
-								  <li class="list-group-item">To load a file drag it over top of the div with the square white border and drop it.</li>
-								  <li class="list-group-item">To load marks, first load a file then hit load Data</li>
-								  <li class="list-group-item">Annotations will pop up at every mark, or you can create your own by clicking Annotation</li>
-								</ul>
-							</div>
-							<div class="modal-footer toLoad">
-								<button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
-							</div>
-						</div><!-- /.modal-content -->
-					</div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-				<p><a href="https://dl.dropboxusercontent.com/u/3004236/Audio%20Project%20Sample%20File/26-RC2_20120415_210502.wav">Demo Audio File</a></p>
-				<p><a href="https://docs.google.com/forms/d/1dSiH6hgcWE2jUrajPXxaYaITbg3hd_BUNZc6MP9rz2k/viewform">Usability Survey - Please fill out.</a></p>
-			</div>
+			<div class="modal fade" id="viewHelp" tabindex="-1" role="dialog" aria-labelledby="viewDataLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content toSave">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h2 class="modal-title" id="myModalLabel">HELP!</h2>
+						</div>
+						<div class="modal-body">
+							<ul class="list-group">
+							  <li class="list-group-item">To start registration, click the <span style="color:green">green</span> Register Button</li>
+							  <li class="list-group-item">Login using the <span style="color:blue">blue</span> login Button</li>
+							  <li class="list-group-item">To load a file drag it over top of the div with the square white border and drop it.</li>
+							  <li class="list-group-item">To load marks, first load a file then hit load Data</li>
+							  <li class="list-group-item">Annotations will pop up at every mark, or you can create your own by clicking Annotation</li>
+							</ul>
+						</div>
+						<div class="modal-footer toLoad">
+							<button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<p><a href="https://dl.dropboxusercontent.com/u/3004236/Audio%20Project%20Sample%20File/26-RC2_20120415_210502.wav">Demo Audio File</a></p>
+			<p><a href="https://docs.google.com/forms/d/1dSiH6hgcWE2jUrajPXxaYaITbg3hd_BUNZc6MP9rz2k/viewform">Usability Survey - Please fill out.</a></p>
 		</div>
 		<a href="https://github.com/Frigeon/AudioProj/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 	</body>
