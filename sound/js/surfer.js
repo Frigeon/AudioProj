@@ -70,16 +70,16 @@ $(document).ready(function(){
 		      url: "controller/createUser.php",
 		      dataType: "json",
 		      data:{
-		    	  username:$('#usernameIn').val(),
-		    	  password:$('#passwordIn').val(),
-		    	  email:$('#email').val()
+		    	  username: $('#usernameIn').val(),
+		    	  password: $('#passwordIn').val(),
+		    	  email: $('#email').val()
 		    	  },
 		      success: function (data) {
 		        alert('Created user');
 		      }
 		   });
 		}else{
-			alert('Pasword Don\'t match');
+			alert('Paswords Don\'t match');
 		}
 	});
 	
