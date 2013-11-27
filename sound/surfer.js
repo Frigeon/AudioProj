@@ -28,7 +28,7 @@ $(document).ready(function(){
 		      dataType: "json",
 		      success: function (data) {
 		        
-		      },
+		      }
 		   });
 	});
 	
@@ -36,19 +36,14 @@ $(document).ready(function(){
 			zoom = this.value/100;
 			console.log("Zoom: " + zoom);
 	});
+	
+	$('#family').trigger("chosen:updated");
+	
+
+console.log('test');
 });
 
-$("#family").change(function(){
-	var famID = $("#family option:selected").val();
-	console.log(famID);
-	$(".species").each(function(index, element){
-		if(element.attr('data-family') == famID){
-			element.removeClass('hide');
-		} else if(!element.hasClass('hide')){
-			element.addClass('hide');
-		}
-	});
-});
+
 
 function save()
 {	

@@ -125,12 +125,12 @@
 								</select>
 							</div>
 							<div id="speciesList" class="form-group">
-								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single">
+								<select data-placeholder="Choose Species Family" style="width:350px;"  class="chosen-select chosen-single" id="speciesListSelect">
 									<option>Choose Species</option>
 									<?php
 										$species = $con->getSpeciesList();
 										foreach($species as $val){
-											echo '<option value="'.$val['BirdID'].' data-family="'.$val['familyID'].'" class="species hide">'.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
+											echo '<option value="'.$val['BirdID'].'" data-family="'.$val['familyID'].'" class="species hide"> '.$val['CommonName'].' - '.$val['ScientificName'].' - '.$val['Code4'].'</option>';
 										}
 									?>
 								</select>
