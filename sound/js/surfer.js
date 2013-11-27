@@ -21,6 +21,9 @@ $(document).ready(function(){
 	$('#annotate').click(function(){
     	$('#toSave').modal('show');
     });
+	$('#helpMe').click(function(){
+		$('#viewHelp').modal('show');
+	});
 
 	
 	$('#loadData').click(function(){

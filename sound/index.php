@@ -37,6 +37,7 @@
 						include 'view/login.php';
 						include 'model/db.php';
 					?>
+					<button class="btn btn-primary" id="helpMe" >Help</button>
 				</div>
 			</div>
 			<?php 
@@ -90,7 +91,7 @@
 						<i class="glyphicon glyphicon-volume-up"></i>
 					</button>
 					<button class="btn btn-primary" id="loadData" >Load Data</button>
-					<button class="btn btn-primary" id="annotate" >Test Annotation</button>
+					<button class="btn btn-primary" id="annotate" >Annotation</button>
 				</div>
 				<div id="response">
 				</div>
@@ -182,9 +183,36 @@
 					</div><!-- /.modal-dialog -->
 				</div><!-- /.modal -->
 			</div>
+			
+			
 			<?php 
 			}
 			?>
+			
+			<!-- Modal -->
+				<div class="modal fade" id="viewHelp" tabindex="-1" role="dialog" aria-labelledby="viewDataLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content toSave">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h2 class="modal-title" id="myModalLabel">HELP!</h2>
+							</div>
+							<div class="modal-body">
+								<ul class="list-group">
+								  <li class="list-group-item">To start register, click the <span style="color:green">green</span> Register Button</li>
+								  <li class="list-group-item">Login using the <span style="color:blue">blue</span> login Button</li>
+								  <li class="list-group-item">To load a file drag it over top of the div witht he square white boder and drop it.</li>
+								  <li class="list-group-item">To load marks, first load a file then hit load Data</li>
+								  <li class="list-group-item">Annotations will pop up at every mark, or you can create your own by click Annotation</li>
+								</ul>
+							</div>
+							<div class="modal-footer toLoad">
+								<button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+			</div>
 		</div>
 	</body>
 </html>
