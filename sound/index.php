@@ -212,6 +212,8 @@
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-dialog -->
 				</div><!-- /.modal -->
+				<p><a href="https://dl.dropboxusercontent.com/u/3004236/Audio%20Project%20Sample%20File/26-RC2_20120415_210502.wav">Demo Audio File</a></p>
+				<p><a href="https://docs.google.com/forms/d/1dSiH6hgcWE2jUrajPXxaYaITbg3hd_BUNZc6MP9rz2k/viewform">Usability Survey - Please fill out.</a></p>
 			</div>
 		</div>
 		<a href="https://github.com/Frigeon/AudioProj/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
