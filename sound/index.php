@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Soundsation</title>
+		<title>Avialae Soundsation</title>
 		<?php
 			//include('db.php');
 			define('PATH', 'AudioProj/sound/');
@@ -27,7 +27,7 @@
 	<body >
 		<div class="container">
 			<div class="header">
-				<h1 itemprop="name">Soundsation</h1>
+				<h1 itemprop="name">Avialae Soundsation</h1>
 				<p><a href="https://github.com/katspaugh/wavesurfer.js/pull/17" title="Wavesurfer.js" target="_blank"> - using wavesurfer.js</a></p>
 				<div class="">
 					<?php 
