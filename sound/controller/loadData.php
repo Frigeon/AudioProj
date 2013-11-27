@@ -32,5 +32,28 @@ foreach($data as $val)
 			.'</tr>';
 }
 $rows .= '</table>';
+
+$userData =$con->getNoteData($fileID);
+
+$rows .= '<table  class="DataRow"><tr ><th>noteID</th><th>userID</th><th>userRel</th><th>noteStart</th><th>noteEnd</th>'
+			.'<th>Note</th><th>userFamilyID</th><th>userSpeciesID</th></tr>';
+
+foreach($userData as $val)
+{
+	$rows .= '<tr >'
+					.'<td>'.$val['noteID'].'</td>'
+					.'<td>'.$val['userID'].'</td>'
+					.'<td>'.number_format ($val['userRel'], 2).'</td>' 
+					.'<td>'.number_format ($val['noteStart'], 2).'</td>'
+					.'<td>'.number_format ($val['noteEnd'], 2).'</td>'
+					.'<td>'.$val['note'].'</td>'
+					.'<td>'.$val['userFamilyID'].'</td>'
+					.'<td>'.$val['userSpeciesID'].'</td>'
+			.'</tr>';
+}
+
+
+			
+$rows .= '</table>';
 echo json_encode(array('fileId'=>$fileID, 'data'=>$rows));
 return;

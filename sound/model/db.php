@@ -151,7 +151,17 @@ class DB{
 		$query->bindParam(":fileID", $fileID);
 		$query->execute();
 		$result = $query->fetchAll();
-		return $result; //should return the array of mark points
+		return $result; 
+	}
+	
+	public function getNoteData($fileID)
+	{
+		$sql = "SELECT* FROM note WHERE fileID=:fileID";
+		$query = $this->db->prepare($sql);
+		$query->bindParam(":fileID", $fileID);
+		$query->execute();
+		$result = $query->fetchAll();
+		return $result; 
 	}
 }
 

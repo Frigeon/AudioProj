@@ -73,7 +73,7 @@ $(document).ready(function(){
 		    	  password:$('#password').val()
 		    	  },
 		      success: function (data) {
-		        //location.reload();
+		        location.reload();
 		      }
 		   });
 		
