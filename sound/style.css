@@ -40,7 +40,7 @@ body {
         border:1px solid black;
         border-radius:15px;
         box-shadow:0 0 12px #000;
-        background-color:rgba(0,0,0,0.9);
+        background-color:hsla(26, 66%, 38%, 1);
         color:rgba(0,255,0,0.8);
     }
 }
@@ -64,8 +64,8 @@ body {
 		border:1px solid black;
         border-radius:15px;
         box-shadow:0 0 12px #000;
-        background-color:rgba(0,0,0,0.9);
-        color:rgba(0,255,0,0.8);
+        background-color:hsla(26, 66%, 19%, .7);
+        color:hsla(225, 100%, 100%, 0.71);
 	}
     /* Remove the padding we set earlier */
     .header,
